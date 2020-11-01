@@ -10,13 +10,15 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.10.11",
+    "cors": "^2.8.5"
   },
   "engines": {
     "node": "12.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/hello-express"
+    "url": "https://github.com/dracero/express_tutorial"
   },
   "license": "MIT",
   "keywords": [
