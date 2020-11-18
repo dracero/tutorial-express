@@ -6,6 +6,7 @@ const router = express.Router()
 router.get("/posts", async (req, res) => {
 	const posts = await Post.find({})
 	res.send(posts)
+	console.log("hola")
 })
 
 module.exports = router
