@@ -8,7 +8,7 @@ const routes = require("./routes")
 app.use(cors());
 // Connect to MongoDB database
 mongoose
-	.connect("mongodb+srv://brad12:brad123@cluster0.zf9fl.mongodb.net/udemy?retryWrites=true&w=majority", { useNewUrlParser: true })
+	.connect("mongodb+srv://brad123:brad123@cluster0.zf9fl.mongodb.net/udemy?retryWrites=true&w=majority", { useNewUrlParser: true })
 	.then(() => {
 		const app = express()
     app.use("/api", routes)
