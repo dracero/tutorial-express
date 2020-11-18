@@ -5,4 +5,4 @@ const schema = mongoose.Schema({
 	content: String
 })
 
-module.exports = mongoose.model("user", schema)
+module.exports = mongoose.model("datos", schema)//el nombre que tiene que ir en el model es el de la collection
