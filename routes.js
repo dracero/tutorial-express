@@ -4,7 +4,7 @@ const router = express.Router()
 
 // Get all posts
 router.get("/posts", async (req, res) => {
-	const posts = await udemy.Post.find()
+	const posts = await Post.find()
 	res.send(posts)
 })
 
