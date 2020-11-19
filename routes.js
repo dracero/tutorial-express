@@ -6,7 +6,8 @@ var app = express()
 
 app.use(cors())
 
-// Get all posts
+// se llama con la siguiente URI: http://express-tutorial-20.herokuapp.com/api/posts?email=diego.racero@gmail.com
+//si hubiere más parametros se separan por &
 router.get("/posts", async (req, res) => {
 	let email = req.query.email;
 	const posts = await Post.find({email:email})
