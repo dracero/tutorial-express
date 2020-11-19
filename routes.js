@@ -7,7 +7,8 @@ var app = express()
 app.use(cors())
 
 // Get all posts
-router.get("/posts", async (req, res) => {
+router.get("/posts/:email", async (req, res) => {
+	var email = req.params.email;
 	const posts = await Post.find({})
 	res.send(posts)
 })
