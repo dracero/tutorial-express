@@ -20,7 +20,7 @@ router.get("/update", async (req, res) => {
 	let apellido = req.query.apellido;
 	let email = req.query.email;
 	let dni = req.query.dni;
-	const update = await Post.findByIdAndUpdate(id,{nombre:nombre,apellido:apellido,email:email,}, { useFindAndModify: false })
+	const update = await Post.findByIdAndUpdate(id,{nombre:nombre,apellido:apellido,email:email,dni:dni}, { useFindAndModify: false })
 					      
 	res.send(update)
 })
