@@ -1,5 +1,5 @@
 const express = require("express")
-const Post = require("./models/Post") // new
+const Post = require("./models/Post") // cuando defino el model pongo el nombre de la collection y las variables del schema
 const router = express.Router()
 var cors = require('cors')
 var app = express()
@@ -13,5 +13,18 @@ router.get("/posts", async (req, res) => {
 	const posts = await Post.find({email:email})
 	res.send(posts)
 })
+
+/*router.post("/update", async (req, res) => {
+	let nombre = req.query.nombre;
+	let apellido = req.query.apellido;
+	let email = req.query.email;
+	let dni = req.query.dni;
+	const update = await Post.update({},  {nombre:nombre},
+					      {apellido:apellido},
+					      {email:email},
+					      {dni:dni},
+					      {multi:true})
+	res.send(update)
+})*/
 
 module.exports = router
