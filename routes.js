@@ -15,15 +15,16 @@ router.get("/posts", async (req, res) => {
 })
 
 router.put("/update", async (req, res) => {
+	let id = req.query.id
 	let nombre = req.query.nombre;
-	let apellido = req.query.apellido;
+	/*let apellido = req.query.apellido;
 	let email = req.query.email;
-	let dni = req.query.dni;
-	const update = await Post.update({},  {nombre:nombre},
+	let dni = req.query.dni;*/
+	const update = await Post.update({_id:id},  {nombre:nombre})/*,
 					      {apellido:apellido},
 					      {email:email},
 					      {dni:dni},
-					      {multi:true})
+					      {multi:true})*/
 	res.send(update)
 })
 
