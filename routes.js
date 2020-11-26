@@ -14,7 +14,7 @@ router.get("/posts", async (req, res) => {
 	res.send(posts)
 })
 
-router.post("/update", async (req, res) => {
+/*router.post("/update", async (req, res) => {
 	let nombre = req.query.nombre;
 	let apellido = req.query.apellido;
 	let email = req.query.email;
@@ -25,6 +25,6 @@ router.post("/update", async (req, res) => {
 					      {dni:dni},
 					      {multi:true})
 	res.send(update)
-})
+})*/
 
 module.exports = router
