@@ -17,10 +17,10 @@ router.get("/posts", async (req, res) => {
 router.get("/update", async (req, res) => {
 	let id = req.query.id
 	let nombre = req.query.nombre;
-	/*let apellido = req.query.apellido;
-	let email = req.query.email;
+	let apellido = req.query.apellido;
+	/*let email = req.query.email;
 	let dni = req.query.dni;*/
-	const update = await Post.findByIdAndUpdate(id,{nombre:nombre}, { useFindAndModify: false })/*,
+	const update = await Post.findByIdAndUpdate(id,{nombre:nombre,apellido:apellido}, { useFindAndModify: false })/*,
 					      {apellido:apellido},
 					      {email:email},
 					      {dni:dni},
