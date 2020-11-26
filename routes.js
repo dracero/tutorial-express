@@ -20,7 +20,7 @@ router.put("/update", async (req, res) => {
 	/*let apellido = req.query.apellido;
 	let email = req.query.email;
 	let dni = req.query.dni;*/
-	const update = await Post.update({_id:id},  {nombre:nombre})/*,
+	const update = await Post.findByIdAndUpdate({_id:id},  {nombre:nombre},{ new: true })/*,
 					      {apellido:apellido},
 					      {email:email},
 					      {dni:dni},
