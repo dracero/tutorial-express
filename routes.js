@@ -33,6 +33,7 @@ router.get("/ingreso", async (req, res) => {
 	let dni = req.query.dni;
 	new Post({nombre:nombre,apellido:apellido,email:email,dni:dni}).save(function (error, data) {
            // handle errors, log success etc.
+           res.send(data)
            });
 	//http://express-tutorial-20.herokuapp.com/api/ingreso?nombre=Diego&apellido=Racero&email=diego.racero@hotmail.com&dni=21738764
 	//hay que armar esa URL
