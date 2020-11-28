@@ -35,7 +35,7 @@ router.get("/insert", async (req, res) => {
 	const update = await Post.insert({nombre:nombre,apellido:apellido,email:email,dni:dni})
 	//http://express-tutorial-20.herokuapp.com/api/insert?&nombre=Diego&apellido=Racero&email=diego.racero@hotmail.com&dni=21738764
 	//hay que armar esa URL
-	res.send(update)
+	res.send(insert)
 })
 
 
