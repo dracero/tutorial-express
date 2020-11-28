@@ -38,5 +38,4 @@ router.get("/insert", async (req, res) => {
 	res.send(insert)
 })
 
-
 module.exports = router
