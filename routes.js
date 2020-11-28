@@ -26,10 +26,14 @@ router.get("/update", async (req, res) => {
 	res.send(update)
 })
 
-
 router.get("/ingreso", async (req, res) => {
+	let nombre = req.query.nombre;
+	let apellido = req.query.apellido;
 	let email = req.query.email;
-	const ingreso = await Post.find({email:email})
+	let dni = req.query.dni;
+	const ingreso = await Post.save({nombre:nombre,apellido:apellido,email:email,dni:dni})
+	//http://express-tutorial-20.herokuapp.com/api/update?nombre=Diego&apellido=Racero&email=diego.racero@hotmail.com&dni=21738764
+	//hay que armar esa URL
 	res.send(ingreso)
 })
 
