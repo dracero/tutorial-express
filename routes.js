@@ -32,7 +32,7 @@ router.get("/ingreso", async (req, res) => {
 	let email = req.query.email;
 	let dni = req.query.dni;
 	let _id = new ObjectID()
-	const ingreso = await Post.insert({_id:_id,nombre:nombre,apellido:apellido,email:email,dni:dni})
+	const ingreso = await Post.save({_id:_id,nombre:nombre,apellido:apellido,email:email,dni:dni})
 	//http://express-tutorial-20.herokuapp.com/api/update?nombre=Diego&apellido=Racero&email=diego.racero@hotmail.com&dni=21738764
 	//hay que armar esa URL
 	res.send(ingreso)
