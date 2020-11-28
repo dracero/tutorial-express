@@ -26,7 +26,7 @@ router.get("/update", async (req, res) => {
 	res.send(update)
 })
 
-router.get("/ingreso", async (req, res) => {
+router.post("/ingreso", async (req, res) => {
 	let nombre = req.query.nombre;
 	let apellido = req.query.apellido;
 	let email = req.query.email;
