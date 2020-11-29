@@ -39,4 +39,11 @@ router.get("/ingreso", async (req, res) => {
 	//hay que armar esa URL
 })
 
+router.get("/del", async (req, res) => {
+	let email = req.query.email;
+	const del = await Post.find({email:email})
+	res.send(del)
+})
+
+
 module.exports = router
