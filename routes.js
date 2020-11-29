@@ -41,7 +41,7 @@ router.get("/ingreso", async (req, res) => {
 
 router.get("/del", async (req, res) => {
 	let email = req.query.email;
-	const del = await Post.find({email:email})
+	const del = await Post.deleteOne({email:email})
 	res.send(del)
 })
 
